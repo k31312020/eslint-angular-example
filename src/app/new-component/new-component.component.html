@@ -1,0 +1,13 @@
+<p>
+  new-component works!
+</p>
+
+<div [formGroup]="userForm">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+</div>
+
+<button (click)="view()">View control</button>
+<button (click)="useService()">Trigger Service</button>

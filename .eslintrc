@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:@angular-eslint/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.eslint.json",
+    "sourceType": "module",
+    "createDefaultProgram": true
+  },
+  "ignorePatterns": [
+    "*.spec.ts"
+  ],
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint",
+    "@typescript-eslint/tslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/quotes": [
+      "error",
+      "single"
+    ],
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "variableDeclaration": true,
+        "memberVariableDeclaration": true,
+        "propertyDeclaration": true
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "max-lines-per-function": [
+      "error",
+      10
+    ],
+    "max-params": [
+      "error",
+      5
+    ],
+    "max-depth": [
+      "error",
+      1
+    ],
+    "no-empty": "error",
+    "@angular-eslint/no-lifecycle-call": "error",
+    "@angular-eslint/no-pipe-impure": "error",
+    "@angular-eslint/directive-selector": [
+      "error",
+      {
+        "type": "attribute",
+        "prefix": "ourprefix",
+        "style": "camelCase"
+      }
+    ],
+    "@angular-eslint/component-selector": [
+      "error",
+      {
+        "type": "element",
+        "prefix": "ourcomponent",
+        "style": "kebab-case"
+      }
+    ]
+  }
+}
